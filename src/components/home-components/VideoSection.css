@@ -1,0 +1,129 @@
+/* video{
+    object-fit: cover;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    filter: grayscale(200%);
+} */
+
+.video-container{
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+    object-fit: contain;
+}
+
+.video-container .bgImg img{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: max-content;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .5s;
+    filter: grayscale(0%) contrast(1.3) blur(3px);
+}
+
+.bgImg::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(-45deg, hsla(var(--hue-color), 35%, 20%,0.3), hsla(var(--hue-color), 29%, 16%,0.3)) ;
+    pointer-events: none;
+    mix-blend-mode: color;
+}
+
+.video-container > h1 {
+    font-weight: 300;
+    text-align: center;
+    color: var(--white);
+    font-size: 50px;
+    margin-top: 0px;
+}
+.video-container h1 .styleh1{
+    font-weight: 600;
+}
+
+.video-container p {
+    text-align: center;
+    font-weight: 300;
+    margin-top: 8px;
+    color: var(--white);
+    font-size: 35px;
+}
+.video-container p .pbold{
+    font-weight: 500;
+}
+.video-container p .pcolor{
+    font-weight: 600;
+    mix-blend-mode: unset;
+}
+
+.video-container .video-btns{
+    margin-top: 20px;
+}
+
+.video-container .video-btns > .btn-mobile{
+    margin: 6px;
+}
+
+.fa-play-circle{
+    margin-left: 4px;
+}
+
+.video-container .video-btns .fal{
+    margin-left: 10px;
+    transition: .3s;
+}
+.video-container .video-btns .btn:hover .fal{
+    transform: translateX(3px);
+
+}
+
+
+
+@media screen and (max-width: 960px)
+{
+    .video-container > h1 {
+        font-size: 40px;
+        margin-top: -50px;
+    }
+    .video-container .btn{
+        width: 100%;
+        margin-bottom: 6px;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    .video-container > h1 {
+        font-size: 40px;
+        margin-top: -50px;
+        margin-left: 10px;
+    }
+
+    .video-container > p{
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .btn-mobile{
+        display: block;
+        text-decoration: none;
+    }
+
+    .video-container .btn{
+        font-size: 20px;
+        width: 100%;
+        margin: 10px;
+    }
+}

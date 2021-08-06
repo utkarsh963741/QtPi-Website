@@ -1,0 +1,23 @@
+.home__blog{
+    background-color: var(--container-color-dark);
+    color:var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.home__blog .contents{
+    margin-bottom: 30px ;
+    text-align: center;
+    width: 90%;
+}
+
+.home__blog .title{
+    font-weight: 400;
+}
+
+.home__blog .cards-item > *{
+    color: #fff;
+}
